@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front.templates.home');
 });
+Route::get('/about', function () {
+    return view('front.templates.about');
+});
+Route::get('/index', function () {
+    return view('front.templates.index');
+});
+
+Route::resource('/comics', 'Controll');
